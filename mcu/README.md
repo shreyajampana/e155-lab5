@@ -1,0 +1,1 @@
+In this lab, I will determine the direction and velocity of a motor by using interrupts to read from a quadrature encoder. 

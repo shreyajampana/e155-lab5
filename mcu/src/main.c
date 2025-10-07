@@ -1,7 +1,7 @@
-// main.c
 // Shreya Jampana
 // sjampana@hmc.edu
 // 10/4/25
+// This is the main.c file, which takes in encoder inputs and computes a velocity using interrupts.   
 
 #include "/Users/shreyajampana/e155-lab5/mcu/src/main.h"
 
@@ -110,7 +110,6 @@ int main(void) {
       void compute_velocity(void) {
         //Calculating the velocity
         float velocity = ((float)counter)/(PPR*4);
-        printf("Counter: %i \n", counter);
 
         //Resetting the counter
         counter = 0;

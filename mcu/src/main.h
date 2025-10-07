@@ -1,7 +1,7 @@
-// main.h
 // Shreya Jampana
 // sjampana@hmc.edu
 // 10/4/25
+// This is the main.h file containing some defined variables and functions. 
 
 #ifndef MAIN_H
 #define MAIN_H

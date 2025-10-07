@@ -1,7 +1,7 @@
-// main.c
 // Shreya Jampana
 // sjampana@hmc.edu
 // 10/4/25
+// This is the main.c file, which takes in encoder inputs and computes a velocity using interrupts.   
 
 #include "/Users/shreyajampana/e155-lab5/mcu/src/main.h"
 

@@ -110,7 +110,6 @@ int main(void) {
       void compute_velocity(void) {
         //Calculating the velocity
         float velocity = ((float)counter)/(PPR*4);
-        printf("Counter: %i \n", counter);
 
         //Resetting the counter
         counter = 0;

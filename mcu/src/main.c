@@ -56,22 +56,12 @@ int main(void) {
         EXTI->PR1 |= (1 << gpioPinOffset(PIN_A));
         
         // CW rising edge of A
-        if (digitalRead(PIN_A) && !digitalRead(PIN_B)) {
+        if (digitalRead(PIN_A) != digitalRead(PIN_B)) {
             counter++;
         }
 
         // CCW rising edge of A
-        if (digitalRead(PIN_A) && digitalRead(PIN_B)) {
-            counter--;
-        }
-
-        // CW falling edge of A
-        if (!digitalRead(PIN_A) && digitalRead(PIN_B)) {
-            counter++;
-        }
-
-        // CCW falling edge of A
-        if (!digitalRead(PIN_A) && !digitalRead(PIN_B)) {
+        else {
             counter--;
         }
     }
@@ -86,22 +76,12 @@ int main(void) {
         EXTI->PR1 |= (1 << gpioPinOffset(PIN_B));
 
         // CW rising edge of B
-        if (digitalRead(PIN_A) && digitalRead(PIN_B)) {
+        if (digitalRead(PIN_A) == digitalRead(PIN_B)) {
             counter++;
         }
 
         // CCW rising edge of B
-        if (!digitalRead(PIN_A) && digitalRead(PIN_B)) {
-            counter--;
-        }
-
-        // CW falling edge of B
-        if (!digitalRead(PIN_A) && !digitalRead(PIN_B)) {
-            counter++;
-        }
-
-        // CCW falling edge of B
-        if (digitalRead(PIN_A) && !digitalRead(PIN_B)) {
+        else {
             counter--;
         }
     }
